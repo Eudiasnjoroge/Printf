@@ -1,8 +1,22 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <unistd.h>
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _printf_char(va_list, val);
+int _print_str(va_list list);
+int _strlength(char *s);
+int _strlength(const char *s);
+int printper(void);
+int print_deci(va_list arg);
+int print_inte(va_list arg);
+int print_binary(va_list v);
+int print_octa(va_list v);
+int print_hexa(va_list v);
 
 #endif
