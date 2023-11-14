@@ -2,11 +2,11 @@
 
 /**
  * _printf_char - print character
- * @val: argument
+ * @va: argument
  * Return: 1
  */
 
-int _printf_char(va_list, val)
+int _printf_char(va_list, va)
 {
 	char i;
 

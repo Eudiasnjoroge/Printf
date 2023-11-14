@@ -1,0 +1,42 @@
+#include "main.h"
+/**
+ * main_printf - prints on the screen
+ * @format: identifies format used
+ * Return: string length
+ */
+int main_printf(const char * const format, ...)
+{
+	change k[] = {
+		{"%s", printstr}, {"%c", printchar},
+		{"%%", printper},
+		{"%i", printinte}, {"%d", printdeci}
+	};
+
+	va_list arg;
+	int a = 0, b, len = 0;
+
+	va_start(arg, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
+This:
+	while (format[a] != '\0')
+	{
+		b = 13;
+		while (b >= 0)
+		{
+			if (k[b].v[0] == format[a] && k[b].v[1] == format[a + 1])
+			{
+				len += k[b].myfunct(arg);
+				a = a + 2;
+				goto This;
+			}
+			b--;
+		}
+		_putchar(format[a]);
+		len++;
+		a++;
+	}
+	va_end(arg);
+	return (len);
+}
