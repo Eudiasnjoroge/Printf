@@ -2,11 +2,11 @@
 
 /**
  * print_char - prints a character  on tthe screen
- * @list: input value
+g* va: input value
  * Return: a 1
  */
 
-int print_char(va_list list)
+int print_char(va_list va)
 {
 	char s;
 

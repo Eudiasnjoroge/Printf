@@ -14,7 +14,7 @@ int _strlength(char *s)
 	return (n);
 }
 /**
- * _strlength - strlen function applied for constant char pointer str
+ * _strlength - prints string lengthr
  * @s: points s
  * Return: n
  */

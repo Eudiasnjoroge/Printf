@@ -9,7 +9,7 @@ int main_printf(const char * const format, ...)
 	change k[] = {
 		{"%s", printstr}, {"%c", printchar},
 		{"%%", printper},
-		{"%i", printinte}, {"%d", printdeci}
+		{"%i", printint}, {"%d", printdeci}
 	};
 
 	va_list arg;

@@ -8,12 +8,9 @@
 int _printf(const char * const format, ...)
 {
 	convert p[] = {
-		{"%s", _strlength}, {"%c", printf_char},
-		{"%%", print37},
-		{"%i", print_inte}, {"%d", print_deci},
-		{"%b", print_binary},
-		{"%o", print_octa}, {"%x", print_hexa},
-		{"%S", _strlength}
+		{"%s", _strlength}, {"%c", printchar},
+		{"%%", printper},
+		{"%i", printint}, {"%d", printdeci},
 	};
 
 	va_list arg;
@@ -22,7 +19,7 @@ int _printf(const char * const format, ...)
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
+Here:
 	while (format[i] != '\0')
 	{
 		j = 13;
