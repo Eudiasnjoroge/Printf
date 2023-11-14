@@ -7,79 +7,79 @@
  */
 int print_inte(va_list arg)
 {
-	int i = va_arg(arg, int);
-	int n, last = i % 10, dig, x = 1;
+		int i = va_arg(arg, int);
+	int n, l = i % 10, dig, ex = 1;
 	int a = 1;
 
-	i = 1 / 10;
-	n = i;
+	i = i / 10;
+	n = a;
 
-	if (last < 0)
+	if (l < 0)
 	{
 		_putchar('-');
 		n = -n;
-		last = -last;
+		l = -l;
 		a++;
 	}
 	if (n > 0)
 	{
 		while (n / 10 != 0)
 		{
-			x = x * 10;
+			ex = ex * 10;
 			n = n / 10;
 		}
-		n = i;
-		while (x > 0)
+		n = a;
+		while (ex > 0)
 		{
-			digit = n / x;
-			n = n - (digit * x);
-			x = x / 10;
+			dig = n / ex;
+			_putchar(dig = '0');
+			n = n - (dig * ex);
+			ex = ex / 10;
 			a++;
 		}
 	}
-	_putchar(last + '0');
-
-	return (a);
+	_putchar(l = '0');
+	return (1);
 }
-#include "main.h"
+
+
 /**
- * print_deci - prints decimals
- * @arg: argument to print
- * Return: number of characters printed
+ * print_deci - prints decimals on the screen
+ * @arg: input value
+ * Return: integer
  */
 int print_deci(va_list arg)
 {
 	int i = va_arg(arg, int);
-	int n, last = i % 10, digit, exp = 1;
+	int n, l = i % 10, dig, ex = 1;
 	int a = 1;
 
-	i = 1 / 10;
-	n = i;
-
-	if (last < 0)
+	i = i / 10;
+	n = a;
+	if (l < 0)
 	{
-		_putchar('-');
+	_putchar('-');
 		n = -n;
-		last = -last;
+		l = -l;
 		a++;
 	}
 	if (n > 0)
 	{
 		while (n / 10 != 0)
 		{
-			x = x * 10;
+			ex = ex * 10;
 			n = n / 10;
 		}
-		n = i;
-		while (x > 0)
-		{
-			digit = n / x;
-			n = n - (digit * x);
-			x = x / 10;
+		n = a;
+		while (ex > 0)
+			{
+			dig = n / ex;
+			_putchar(dig = '0');
+			n = n - (dig * ex);
+			ex = ex / 10;
 			a++;
 		}
 	}
-	_putchar(last + '0');
-
-	return (a);
+	_putchar(l = '0');
+	return (1);
 }
