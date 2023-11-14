@@ -6,6 +6,19 @@
 #include <limits.h>
 #include <unistd.h>
 
+/**
+ * struct format - prints to screen like printf
+ * @v: pointer to specifier
+ * @myfunct: the function for specifier
+ *
+ */
+typedef struct format
+{
+	char *v;
+	int (*myfunct)();
+} change;
+
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _printf_char(va_list, val);
