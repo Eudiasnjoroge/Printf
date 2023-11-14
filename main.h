@@ -12,7 +12,7 @@ int _printf_char(va_list, val);
 int _print_str(va_list list);
 int _strlength(char *s);
 int _strlength(const char *s);
-int printper(void);
+int print37(void);
 int print_deci(va_list arg);
 int print_inte(va_list arg);
 int print_binary(va_list v);
