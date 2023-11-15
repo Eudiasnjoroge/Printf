@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print37 -  prints % sign
+ * print37 - prints % sign
+ * @void: take no argument
  * Return: one
  */
 int print37(void)

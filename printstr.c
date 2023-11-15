@@ -16,16 +16,16 @@ int print_str(va_list list)
 	if (s == NULL)
 	{
 		s == "(NULL)";
-ii		len = _strlength(s);
-		for (j = 0 ; j < length ; j++)
-			_putchar(s[a]);
+		len = _strlength(s);
+		for (j = 0 ; j < len ; j++)
+			_putchar(s[j]);
 		return (len);
 	}
 	else
 	{
 		len = _strlength(s);
-		for (j = 0 ; j < length ; j++)
-		_putchar(s[a]);
+		for (j = 0 ; j < len ; j++)
+		_putchar(s[j]);
 		return (len);
 	}
 }
