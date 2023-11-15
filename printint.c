@@ -7,7 +7,7 @@
  */
 int print_inte(va_list arg)
 {
-		int i = va_arg(arg, int);
+	int i = va_arg(arg, int);
 	int n, l = i % 10, dig, ex = 1;
 	int a = 1;
 
@@ -32,7 +32,7 @@ int print_inte(va_list arg)
 		while (ex > 0)
 		{
 			dig = n / ex;
-			_putchar(dig = '0');
+			_putchar(dig + '0');
 			n = n - (dig * ex);
 			ex = ex / 10;
 			a++;
@@ -74,7 +74,7 @@ int print_deci(va_list arg)
 		while (ex > 0)
 			{
 			dig = n / ex;
-			_putchar(dig = '0');
+			_putchar(dig + '0');
 			n = n - (dig * ex);
 			ex = ex / 10;
 			a++;

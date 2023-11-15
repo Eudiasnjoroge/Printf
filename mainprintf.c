@@ -9,7 +9,7 @@ int main_printf(const char * const format, ...)
 	change k[] = {
 		{"%s", printstr}, {"%c", printchar},
 		{"%%", printper},
-		{"%i", printint}, {"%d", printdeci}
+		{"%i", printint}, {"%d", printint}
 	};
 
 	va_list arg;
@@ -17,12 +17,13 @@ int main_printf(const char * const format, ...)
 
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		va_end(arg);
 		return (-1);
-
-This:
+	}
 	while (format[a] != '\0')
 	{
-		b = 13;
+		b = 4;
 		while (b >= 0)
 		{
 			if (k[b].v[0] == format[a] && k[b].v[1] == format[a + 1])
@@ -37,6 +38,7 @@ This:
 		len++;
 		a++;
 	}
+This:
 	va_end(arg);
 	return (len);
 }
