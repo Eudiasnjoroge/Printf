@@ -2,15 +2,15 @@
 
 /**
  * print_char - prints a character  on tthe screen
- * @va: input value
+ * @arg: input value
  * Return: one
  */
 
-int print_char(va_list va)
+int print_char(va_list arg)
 {
 	char s;
 
-	s = va_arg(va, int);
+	s = va_arg(arg, int);
 	_putchar(s);
 	return (1);
 }

@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 /**
  * main_printf - prints on the screen
  * @format: identifies format used
@@ -6,10 +7,12 @@
  */
 int main_printf(const char * const format, ...)
 {
-	change k[] = {
-		{"%s", printstr}, {"%c", printchar},
-		{"%%", printper},
-		{"%i", printint}, {"%d", printint}
+	struct change k[] = {
+		{"%s", print_str},
+	       	{"%c", print_char},
+		{"%%", print37},
+		{"%i", print_inte}, 
+		{"%d", print_deci}
 	};
 
 	va_list arg;
@@ -37,8 +40,10 @@ int main_printf(const char * const format, ...)
 		_putchar(format[a]);
 		len++;
 		a++;
-	}
 This:
+
+	continue;
+	}
 	va_end(arg);
 	return (len);
 }

@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - function to select current funtion to print
@@ -7,35 +8,44 @@
  */
 int _printf(const char * const format, ...)
 {
-	convert p[] = {
-		{"%s", _strlength}, {"%c", printchar},
-		{"%%", printper},
-		{"%i", printint}, {"%d", printdeci},
+	struct change k[] = {
+		{"%s", print_str}, 
+		{"%c", print_char},
+		{"%%", print37},
+		{"%i", print_inte}, 
+		{"%d", print_deci},
 	};
 
 	va_list arg;
-	int i = 0, j, len = 0;
+	int i = 0, j,len = 0;
 
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	{
+		va_end(arg);
 		return (-1);
-Here:
+	}
+
 	while (format[i] != '\0')
 	{
-		j = 13;
+		j = 4;
 		while (j >= 0)
 		{
-			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
+			if (k[j].v[0] == format[i] && k[j].v[1] == format[i + 1])
 			{
-				len += p[j].function(arg);
+				len += k[j].myfunct(arg);
 				i = i + 2;
-				goto Here;
+				goto This;
+			
 			}
 			j--;
+
 		}
 		_putchar(format[i]);
 		len++;
 		i++;
+	This:
+		continue;
 	}
 	va_end(arg);
 	return (len);

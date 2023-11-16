@@ -2,11 +2,12 @@
 
 /**
  * print37 - prints % sign
- * @void: take no argument
+ * @arg: arggument
  * Return: one
  */
-int print37(void)
+int print37(va_list arg)
 {
+	(void)arg;
 	_putchar(37);
 	return (1);
 }
