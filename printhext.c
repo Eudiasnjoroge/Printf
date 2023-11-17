@@ -1,16 +1,15 @@
 #include "main.h"
 
 /**
- * print_HEXA - prints hexadecimal
- * @arg: input value.
+ * print_HEXA-ex - prints  hexadecimal
+ * @num: input value 
  * Return: counter.
  */
-int print_HEXA(va_list arg)
+int print_HEX_ex(unsigned int num)
 {
 	int a;
 	int *ar;
 	int count = 0;
-	unsigned int n = va_arg(val, unsigned int);
 	unsigned int t = n;
 
 	while (n / 16 != 0)
@@ -24,13 +23,13 @@ int print_HEXA(va_list arg)
 	for (a = 0; a < count; a++)
 	{
 		ar[a] = t % 16;
-		t /= 16;
+		tem /= 16;
 	}
 	for (a = count - 1; a >= 0; a--)
 	{
 		if (ar[a] > 9)
 			ar[a] = ar[a] + 7;
-		_putchar(ar[a] + '0');
+		_putchar(array[a] + '0');
 	}
 	free(ar);
 	return (count);

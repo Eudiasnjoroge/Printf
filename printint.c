@@ -12,7 +12,7 @@ int print_inte(va_list arg)
 	int a = 1;
 
 	i = i / 10;
-	n = a;
+	n = i;
 
 	if (l < 0)
 	{
@@ -28,7 +28,7 @@ int print_inte(va_list arg)
 			ex = ex * 10;
 			n = n / 10;
 		}
-		n = a;
+		n = i;
 		while (ex > 0)
 		{
 			dig = n / ex;
@@ -55,7 +55,7 @@ int print_deci(va_list arg)
 	int a = 1;
 
 	i = i / 10;
-	n = a;
+	n = i;
 	if (l < 0)
 	{
 	_putchar('-');
@@ -70,7 +70,7 @@ int print_deci(va_list arg)
 			ex = ex * 10;
 			n = n / 10;
 		}
-		n = a;
+		n = i;
 		while (ex > 0)
 			{
 			dig = n / ex;
