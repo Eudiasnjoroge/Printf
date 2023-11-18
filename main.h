@@ -33,14 +33,6 @@ int print37(va_list arg);
 int print_HEXA(va_list arg)
 int print_deci(va_list arg);
 int print_inte(va_list arg);
-int print_stringrev(va_list arg);
-int print_pointerhex(va_list arg);
-int print_exclusivestring(va_list arg);
-int print_rot_13(va_list arg);
-int print_HEX_ex(unsigned int num);
-int print_bin(va_list arg);
-int print_OCT(va_list arg);
-
 
 
 #endif
