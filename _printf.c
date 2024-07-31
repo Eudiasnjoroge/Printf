@@ -1,5 +1,8 @@
 #include "main.h"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
 /**
  * _printf - function that selects the correct function to print
  * @format: identifier to look for
@@ -8,12 +11,21 @@
 int _printf(const char * const format, ...)
 {
 	convert_match m[] = {
+<<<<<<< HEAD
 	{"%s", print_string}, {"%c", print_char},
 	{"%%", print_37},
 	{"%i", print_int}, {"%d", print_dec}, {"%r", print_srev},
 	{"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned},
 	{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
 	{"%S", print_exclusive_string}, {"%p", print_pointer}
+=======
+		{"%s", print_string}, {"%c", print_char},
+		{"%%", print_37},
+		{"%i", print_int}, {"%d", print_dec}, {"%r", print_srev},
+		{"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned},
+		{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
+		{"%S", print_exclusive_string}, {"%p", print_pointer}
+>>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
 	};
 
 	va_list args;
@@ -37,7 +49,11 @@ Here:
 			}
 			j--;
 		}
+<<<<<<< HEAD
 		putchar(format[a]);
+=======
+		_putchar(format[a]);
+>>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
 		len++;
 		a++;
 	}
@@ -45,4 +61,7 @@ Here:
 	return (len);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570

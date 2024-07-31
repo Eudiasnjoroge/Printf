@@ -28,7 +28,11 @@ int print_HEX_aux(unsigned int num)
 	for (a = counter - 1; a >= 0; a--)
 	{
 		if (array[a] > 9)
+<<<<<<< HEAD
 		array[a] = array[a] + 7;
+=======
+			array[a] = array[a] + 7;
+>>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
 		_putchar(array[a] + '0');
 	}
 	free(array);
