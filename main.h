@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-#ifndef MAIN_H
-#define MAIN_H
-
-#include <stdarg.h>
-#include <unistd.h>
-#include <limits.h>
-#include <stdlib.h>
-#include <stdio.h>
-=======
-
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -17,9 +6,6 @@
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-
-
->>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
 
 /**
  * struct format - function match the conversion specifiers
@@ -30,13 +16,8 @@
 
 typedef struct format
 {
-<<<<<<< HEAD
-		char *id;
-		int (*f)();
-=======
 	char *id;
 	int (*f)();
->>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
 } convert_match;
 
 int print_pointer(va_list val);
@@ -64,7 +45,3 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 
 #endif
-<<<<<<< HEAD
-=======
-
->>>>>>> 66d019c2892053f67ebb7f56bcbaddc2d084f570
